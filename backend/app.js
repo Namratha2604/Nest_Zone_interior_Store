@@ -1,289 +1,8 @@
-// // // var express = require('express');
-// // // var bodyParser = require('body-parser');
-// // // var mongoose = require('mongoose');
-// // // const { collection } = require('./models/User');
-// // // const path = require('path');
-// // // const app = express();
-
-
-// // // app.use(bodyParser.json());
-// // // app.use(express.static("public"));
-// // // app.use(bodyParser.urlencoded({
-// // //     extended:true
-// // // }))
-
-// // // mongoose.connect('mongodb://localhost:27017/Database');
-// // // var db = mongoose.connection
-// // // db.on('error',()=>console.log("error in connecting to db"));
-// // // db.once('open',()=>console.log("connected to db"))
-
-// // // app.post("/sign_up",(req,res)=>{
-// // //     var name = req.body.name;
-// // //     var email = req.body.email;
-// // //     var password = req.body.password; 
-// // //     console.log(req.body);
-
-// // //     var data = {
-// // //         "name" : name,
-// // //         "email" : email, 
-// // //         "password" : password
-// // //     }
-// // //     db.collection('users').insertOne(data,(err,collection)=>{
-// // //         if(err){
-// // //             throw err;
-// // //         }
-// // //         console.log("record inserted successfully");
-// // //     })
-// // //     return res.redirect('/backend/index.html');
-// // // });
-
-
-// // // app.get("/",(req,res)=>{
-// // //     res.sendFile(path.join(__dirname, 'signup.html'));
-// // // });
-
-// // // app.listen(3000, () => {
-// // //     console.log('Server is running on http://localhost:3000');
-// // // });
-
-
-
-
-
-
-
-// // var express = require('express');
-// // var bodyParser = require('body-parser');
-// // var mongoose = require('mongoose');
-// // const path = require('path');
-// // const app = express();
-
-// // app.use(bodyParser.json());
-// // app.use(express.static("public"));
-// // app.use(bodyParser.urlencoded({ extended: true }));
-
-// // mongoose.connect('mongodb://localhost:27017/Database');
-// // var db = mongoose.connection;
-// // db.on('error', () => console.log("error in connecting to db"));
-// // db.once('open', () => console.log("connected to db"));
-
-// // app.post("/sign_up", (req, res) => {
-// //     var name = req.body.name;
-// //     var email = req.body.email;
-// //     var password = req.body.password;
-// //     console.log(req.body);
-
-// //     var data = {
-// //         "name": name,
-// //         "email": email,
-// //         "password": password
-// //     };
-// //     db.collection('users').insertOne(data, (err, collection) => {
-// //         if (err) {
-// //             throw err;
-// //         }
-// //         console.log("record inserted successfully");
-// //     });
-// //     return res.redirect('index.html'); // Changed to redirect to index.html in the same folder
-// // });
-
-// // // Changed to serve index.html for the root URL
-// // app.get("/", (req, res) => {
-// //     res.sendFile(path.join(__dirname, 'index.html'));
-// // });
-
-// // app.listen(3000, () => {
-// //     console.log('Server is running on http://localhost:3000');
-// // });
-
-
-
-
-
-// var express = require('express');
-// var bodyParser = require('body-parser');
-// var mongoose = require('mongoose');
-// const path = require('path');
-// const app = express();
-
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
-
-// mongoose.connect('mongodb://localhost:27017/Database');
-// var db = mongoose.connection;
-// db.on('error', () => console.log("error in connecting to db"));
-// db.once('open', () => console.log("connected to db"));
-
-// app.post("/sign_up", (req, res) => {
-//     var name = req.body.name;
-//     var email = req.body.email;
-//     var password = req.body.password;
-//     console.log(req.body);
-
-//     var data = {
-//         "name": name,
-//         "email": email,
-//         "password": password
-//     };
-//     db.collection('users').insertOne(data, (err, collection) => {
-//         if (err) {
-//             throw err;
-//         }
-//         console.log("record inserted successfully");
-//     });
-//     return res.redirect('/index.html');
-// });
-
-// // Serving index.html for the root URL
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });
-
-// // Serving shop.html
-// app.get("/shop.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'shop.html'));
-// });
-
-// app.get("/index.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });
-
-// // Serving sproduct.html
-// app.get("/sproduct.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'sproduct.html'));
-// });
-
-// // Serving style.css
-// app.get("/style.css", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'style.css'));
-// });
-
-// // Serving script.js
-// app.get("/script.js", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'script.js'));
-// });
-
-// app.get("/signup.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'signup.html'));
-// });
-
-// app.listen(3000, () => {
-//     console.log('Server is running on http://localhost:3000');
-// });
-
-
-
-// var express = require('express');
-// var bodyParser = require('body-parser');
-// var mongoose = require('mongoose');
-// const path = require('path');
-// const User = require('./models/User'); // Importing the User model
-
-// const app = express();
-
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
-
-// mongoose.connect('mongodb://localhost:27017/Database');
-// var db = mongoose.connection;
-// db.on('error', () => console.log("error in connecting to db"));
-// db.once('open', () => console.log("connected to db"));
-
-
-// app.post("/sign_up", (req, res) => {
-//     var name = req.body.name;
-//     var email = req.body.email;
-//     var password = req.body.password;
-//     console.log(req.body);
-
-//     var data = {
-//         "name": name,
-//         "email": email,
-//         "password": password
-//     };
-//     db.collection('users').insertOne(data, (err, collection) => {
-//         if (err) {
-//             throw err;
-//         }
-//         console.log("record inserted successfully");
-//     });
-//     return res.redirect('/index.html');
-// });
-
-// // Serving index.html for the root URL
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });
-
-
-
-// // Route for handling login
-// app.post("/login", async (req, res) => {
-//     const { username, password } = req.body;
-//     try {
-//         // Check if the user exists in the database
-//         const user = await User.findOne({ username: username });
-
-//         if (!user) {
-//             // User not found
-//             return res.status(404).json({ message: "User not found" });
-//         }
-
-//         // Check if the password is correct
-//         if (password !== user.password) {
-//             // Incorrect password
-//             return res.status(401).json({ message: "Incorrect password" });
-//         }
-
-//         // Login successful
-//         return res.status(200).json({ message: "Login successful" });
-//     } catch (error) {
-//         console.error("Error:", error);
-//         return res.status(500).json({ message: "Internal server error" });
-//     }
-// });
-
-// // Serving index.html for the root URL
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });
-
-// // Serving other static files
-// app.get("/shop.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'shop.html'));
-// });
-
-// app.get("/index.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });
-
-// app.get("/sproduct.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'sproduct.html'));
-// });
-
-// app.get("/style.css", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'style.css'));
-// });
-
-// app.get("/script.js", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'script.js'));
-// });
-
-// app.get("/signup.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'signup.html'));
-// });
-
-// app.listen(3000, () => {
-//     console.log('Server is running on http://localhost:3000');
-// });
-
-
-
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 const path = require('path');
-const User = require('./models/User'); // Importing the User model
+const User = require('./models/User'); 
 
 const app = express();
 
@@ -292,7 +11,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('/Users/namrathagunda/Desktop/shop/backend'));
 
-mongoose.connect('mongodb://localhost:27017/Database', { useNewUrlParser: true, useUnifiedTopology: true }); // Adding useNewUrlParser and useUnifiedTopology options
+mongoose.connect('mongodb+srv://Namratha2604:nam1234@cluster0.mtkhlv7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true });
+    // Adding useNewUrlParser and useUnifiedTopology options
+    
 var db = mongoose.connection;
 db.on('error', (err) => console.error("Error in connecting to db:", err)); // Logging the error
 db.once('open', () => console.log("Connected to db"));
@@ -307,7 +30,7 @@ app.post("/sign_up", async (req, res) => {
         const user = await User.findOne({ email: email });
 
         if (user) {
-            return res.status(400).json({ message: "User already exists" });
+            return res.status(200).send('<script>alert("User already exists"); window.location.href = "/signup.html";</script>');
         }
 
         const newUser = new User({
@@ -322,7 +45,7 @@ app.post("/sign_up", async (req, res) => {
         return res.redirect('/login.html');
     } catch (error) {
         console.error("Error:", error);
-        return res.status(500).json({ message: "Internal server error" });
+        return res.status(200).send('<script>alert("Internal Server Error"); window.location.href = "/signup.html";</script>');
     }
 });
 
@@ -336,13 +59,15 @@ app.post("/login", async (req, res) => {
 
         if (!users) {
             // User not found
-            return res.status(404).json({ message: "User not found" });
+            // return res.status(404).json({ message: "User not found" });
+            return res.status(200).send('<script>alert("User not found"); window.location.href = "/login.html";</script>');
         }
 
         // password is correct
         if (password !== users.password) {
             // Incorrect password
-            return res.status(401).json({ message: "Incorrect password" });
+        //     return res.status(401).json({ message: "Incorrect password" });
+            return res.status(200).send('<script>alert("Incorrect password"); window.location.href = "/login.html";</script>');
         }
 
         
@@ -396,6 +121,6 @@ app.get("/", (req, res) => {
 //     res.sendFile(path.join(__dirname, 'login.html'));
 // });
 
-app.listen(2000, () => {
+app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
