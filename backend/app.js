@@ -9,9 +9,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('backend'));
+app.use(express.static('/Users/namrathagunda/Desktop/shop/backend'));
 
-mongoose.connect('mongodb+srv://Namratha2604:nam1234@cluster0.mtkhlv7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { 
+mongoose.connect('mongodb+srv://Namratha26:1234@cluster0.c92wdwz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { 
     useNewUrlParser: true,
     useUnifiedTopology: true });
     // Adding useNewUrlParser and useUnifiedTopology options
