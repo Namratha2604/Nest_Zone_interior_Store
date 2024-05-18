@@ -84,43 +84,6 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-
-
-
-
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });
-
-// // Serving other static files
-// app.get("/shop.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'shop.html'));
-// });
-
-// app.get("/index.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });
-
-// app.get("/sproduct.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'sproduct.html'));
-// });
-
-// app.get("/style.css", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'style.css'));
-// });
-
-// app.get("/script.js", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'script.js'));
-// });
-
-// app.get("/signup.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'signup.html'));
-// });
-
-// app.get("/login.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'login.html'));
-// });
-
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
